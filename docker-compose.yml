@@ -66,6 +66,7 @@ services:
 
 ########## POSTGRES ##########
   postgres:
+    user: root
     image: postgis/postgis:10-2.5
     shm_size: 4g
     volumes:
@@ -79,6 +80,7 @@ services:
 
 ########## PGADMIN ##########
   pgadmin:
+    user: root
     image: dpage/pgadmin4:latest
     volumes:
       - ${HOST_VOLUMES_PATH}/pgadmin:/var/lib/pgadmin
